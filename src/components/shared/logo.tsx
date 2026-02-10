@@ -12,19 +12,19 @@ export function Logo({ className, size = "nav" }: LogoProps) {
     <Link
       href="/"
       className={cn(
-        "relative inline-flex shrink-0 items-center overflow-hidden",
-        size === "nav" ? "h-12 w-[180px] sm:h-14 sm:w-[210px]" : "h-16 w-[240px] sm:h-20 sm:w-[290px]",
+        "inline-flex shrink-0 items-center",
         className
       )}
     >
       <Image
         src="/logo.png"
         alt="GolfOps"
-        fill
-        sizes={size === "nav" ? "210px" : "290px"}
+        width={size === "nav" ? 220 : 300}
+        height={size === "nav" ? 64 : 88}
+        sizes={size === "nav" ? "220px" : "300px"}
         className={cn(
-          "object-contain object-left",
-          size === "nav" ? "scale-[1.45]" : "scale-[1.55]"
+          "h-auto w-auto max-w-none object-contain",
+          size === "nav" ? "max-h-12 sm:max-h-14" : "max-h-16 sm:max-h-20"
         )}
         priority
       />
