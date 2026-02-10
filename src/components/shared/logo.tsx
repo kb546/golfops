@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 
@@ -6,33 +7,17 @@ interface LogoProps {
   variant?: "default" | "white";
 }
 
-export function Logo({ className, variant = "default" }: LogoProps) {
-  const isDefault = variant === "default";
-
+export function Logo({ className }: LogoProps) {
   return (
-    <Link href="/" className={cn("flex items-center gap-2.5 group", className)}>
-      <span
-        className={cn(
-          "inline-flex h-9 w-9 items-center justify-center transition-transform group-hover:scale-105",
-          "text-limebrand"
-        )}
-        aria-hidden="true"
-      >
-        <svg viewBox="0 0 64 64" className="h-9 w-9" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="31" cy="31" r="25" fill="currentColor" />
-          <path d="M19.5 23.5L33.5 36.2H25.2V46.8C25.2 47.6 25.9 48.2 26.7 48.2H28.3V52.5H20.4V47.2H22C22.9 47.2 23.6 46.5 23.6 45.7V30.8L19.5 27.2V23.5Z" fill={isDefault ? "#1F3E15" : "#FFFFFF"} />
-          <ellipse cx="31" cy="53.4" rx="18.2" ry="4.6" fill="currentColor" />
-          <ellipse cx="31" cy="53.4" rx="4.6" ry="1.9" fill={isDefault ? "#1F3E15" : "#FFFFFF"} />
-        </svg>
-      </span>
-      <span
-        className={cn(
-          "text-xl font-bold tracking-tight font-heading",
-          isDefault ? "text-charcoal" : "text-white"
-        )}
-      >
-        Golf<span className="text-limebrand">Ops</span>
-      </span>
+    <Link href="/" className={cn("inline-flex items-center", className)}>
+      <Image
+        src="/logo.png"
+        alt="GolfOps"
+        width={44}
+        height={44}
+        className="h-11 w-11 object-contain"
+        priority
+      />
     </Link>
   );
 }

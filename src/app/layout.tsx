@@ -42,6 +42,11 @@ export const metadata: Metadata = {
     description:
       "Registration, smart pairings, live scoring, global payments — one platform.",
   },
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({
