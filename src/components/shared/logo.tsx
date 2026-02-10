@@ -13,9 +13,9 @@ export function Logo({ className }: LogoProps) {
       <Image
         src="/logo.png"
         alt="GolfOps"
-        width={44}
-        height={44}
-        className="h-11 w-11 object-contain"
+        width={320}
+        height={96}
+        className="h-10 w-32 object-contain sm:h-12 sm:w-40 md:h-14 md:w-44"
         priority
       />
     </Link>
