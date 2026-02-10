@@ -12,8 +12,8 @@ export function Logo({ className, size = "nav" }: LogoProps) {
     <Link
       href="/"
       className={cn(
-        "relative inline-flex shrink-0 items-center overflow-hidden",
-        size === "nav" ? "h-12 w-[180px] sm:h-14 sm:w-[210px]" : "h-16 w-[220px] sm:h-20 sm:w-[260px]",
+        "relative inline-flex shrink-0 items-center",
+        size === "nav" ? "h-11 w-[150px] sm:h-12 sm:w-[170px]" : "h-14 w-[190px] sm:h-16 sm:w-[220px]",
         className
       )}
     >
@@ -21,11 +21,8 @@ export function Logo({ className, size = "nav" }: LogoProps) {
         src="/logo.png"
         alt="GolfOps"
         fill
-        sizes={size === "nav" ? "260px" : "320px"}
-        className={cn(
-          "object-contain object-center",
-          size === "nav" ? "scale-[2.2]" : "scale-[2.35]"
-        )}
+        sizes={size === "nav" ? "170px" : "220px"}
+        className="object-contain object-left"
         priority
       />
     </Link>
