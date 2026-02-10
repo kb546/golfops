@@ -31,7 +31,7 @@ export function Footer() {
         <div className="grid grid-cols-2 gap-8 md:grid-cols-5 lg:gap-12">
           {/* Brand Column */}
           <div className="col-span-2 md:col-span-1">
-            <Logo variant="white" />
+            <Logo size="footer" />
             <p className="mt-4 text-sm text-gray leading-relaxed max-w-xs">
               Run smarter golf events. Anywhere in the world.
             </p>

@@ -4,18 +4,28 @@ import { cn } from "@/lib/utils";
 
 interface LogoProps {
   className?: string;
-  variant?: "default" | "white";
+  size?: "nav" | "footer";
 }
 
-export function Logo({ className }: LogoProps) {
+export function Logo({ className, size = "nav" }: LogoProps) {
   return (
-    <Link href="/" className={cn("inline-flex items-center", className)}>
+    <Link
+      href="/"
+      className={cn(
+        "relative inline-flex shrink-0 items-center overflow-hidden",
+        size === "nav" ? "h-16 w-[230px] sm:h-[4.5rem] sm:w-[260px]" : "h-20 w-[280px] sm:h-24 sm:w-[320px]",
+        className
+      )}
+    >
       <Image
         src="/logo.png"
         alt="GolfOps"
-        width={320}
-        height={96}
-        className="h-10 w-32 object-contain sm:h-12 sm:w-40 md:h-14 md:w-44"
+        fill
+        sizes={size === "nav" ? "260px" : "320px"}
+        className={cn(
+          "object-contain object-center",
+          size === "nav" ? "scale-[2.7]" : "scale-[3]"
+        )}
         priority
       />
     </Link>
