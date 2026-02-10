@@ -13,7 +13,7 @@ export function Logo({ className, size = "nav" }: LogoProps) {
       href="/"
       className={cn(
         "relative inline-flex shrink-0 items-center overflow-hidden",
-        size === "nav" ? "h-16 w-[230px] sm:h-[4.5rem] sm:w-[260px]" : "h-20 w-[280px] sm:h-24 sm:w-[320px]",
+        size === "nav" ? "h-12 w-[180px] sm:h-14 sm:w-[210px]" : "h-16 w-[220px] sm:h-20 sm:w-[260px]",
         className
       )}
     >
@@ -24,7 +24,7 @@ export function Logo({ className, size = "nav" }: LogoProps) {
         sizes={size === "nav" ? "260px" : "320px"}
         className={cn(
           "object-contain object-center",
-          size === "nav" ? "scale-[2.7]" : "scale-[3]"
+          size === "nav" ? "scale-[2.2]" : "scale-[2.35]"
         )}
         priority
       />

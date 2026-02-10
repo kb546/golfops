@@ -52,7 +52,7 @@ export function Navbar() {
           : "bg-forest border-b border-white/10"
       )}
     >
-      <nav className="container-marketing flex items-center justify-between h-[96px]">
+      <nav className="container-marketing flex items-center justify-between h-[84px]">
         <Logo size="nav" />
 
         {/* Desktop Nav */}
