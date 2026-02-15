@@ -50,17 +50,17 @@ export function CharityContent() {
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-error/10 text-error rounded-full text-xs font-semibold mb-6">
                 <Heart className="w-3.5 h-3.5" /> For Charity Events
               </div>
-              <h1 className="text-4xl md:text-5xl font-extrabold text-charcoal font-heading leading-tight">
+              <h1 className="text-4xl md:text-5xl font-extrabold text-[var(--color-text-primary)] font-heading leading-tight">
                 Raise More. Stress Less.{" "}
                 <span className="text-gradient">Focus on Your Cause.</span>
               </h1>
-              <p className="mt-6 text-lg text-slate leading-relaxed">
+              <p className="mt-6 text-lg text-[var(--color-text-secondary)] leading-relaxed">
                 The all-in-one platform for charity golf events — registration,
                 donations, sponsors, and scoring in one beautiful dashboard.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mt-8">
                 <Link
-                  href="/register"
+                  href="/demo"
                   className="group inline-flex items-center gap-2 px-8 py-4 text-base font-semibold text-white bg-forest hover:bg-forest-light rounded-[var(--radius-sm)] transition-all shadow-card"
                 >
                   Start Your Charity Event
@@ -68,7 +68,7 @@ export function CharityContent() {
                 </Link>
                 <Link
                   href="/demo"
-                  className="inline-flex items-center gap-2 px-8 py-4 text-base font-semibold text-charcoal border border-gray/20 hover:bg-light rounded-[var(--radius-sm)] transition-all"
+                  className="inline-flex items-center gap-2 px-8 py-4 text-base font-semibold text-[var(--color-text-primary)] border border-gray/20 hover:bg-light rounded-[var(--radius-sm)] transition-all"
                 >
                   Book a Demo
                 </Link>
@@ -95,7 +95,7 @@ export function CharityContent() {
       </section>
 
       {/* Pain points */}
-      <section className="section-padding bg-lighter">
+      <section className="section-padding bg-[var(--color-bg-lighter)]">
         <div className="container-marketing">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -104,7 +104,7 @@ export function CharityContent() {
             transition={{ duration: 0.5 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-charcoal font-heading">
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-primary)] font-heading">
               Sound familiar?
             </h2>
           </motion.div>
@@ -121,7 +121,7 @@ export function CharityContent() {
                   className="flex items-center gap-3 p-4 bg-white rounded-[var(--radius-md)] border border-gray/10"
                 >
                   <Icon className="w-5 h-5 text-error/60 flex-shrink-0" />
-                  <span className="text-sm text-slate">{point.text}</span>
+                  <span className="text-sm text-[var(--color-text-secondary)]">{point.text}</span>
                 </motion.div>
               );
             })}
@@ -139,7 +139,7 @@ export function CharityContent() {
             transition={{ duration: 0.5 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-charcoal font-heading">
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-primary)] font-heading">
               With GolfOps, you get:
             </h2>
           </motion.div>
@@ -156,10 +156,10 @@ export function CharityContent() {
                   className="p-6 rounded-[var(--radius-md)] bg-lighter border border-gray/5 hover:shadow-card transition-all"
                 >
                   <Icon className="w-8 h-8 text-emerald mb-4" />
-                  <h3 className="text-base font-bold text-charcoal font-heading mb-2">
+                  <h3 className="text-base font-bold text-[var(--color-text-primary)] font-heading mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-slate leading-relaxed">
+                  <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
                     {item.description}
                   </p>
                 </motion.div>
@@ -182,16 +182,16 @@ export function CharityContent() {
             <h2 className="text-3xl md:text-4xl font-bold font-heading mb-4">
               Accept donations via card, bank transfer, M-Pesa, or mobile money
             </h2>
-            <p className="text-lg text-gray mb-8">
+            <p className="text-lg text-[var(--color-text-light-secondary)] mb-8">
               Reach donors wherever they are. GolfOps supports more payment
               methods than any other golf event platform.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
-                href="/register"
-                className="group inline-flex items-center gap-2 px-8 py-4 text-base font-semibold text-forest bg-white hover:bg-light rounded-[var(--radius-sm)] transition-all"
+                href="/demo"
+                className="group inline-flex items-center gap-2 px-8 py-4 text-base font-semibold text-white bg-gradient-primary hover:shadow-glow-lime-hover rounded-[var(--radius-sm)] transition-all shadow-glow-lime"
               >
-                Get Started Free
+                Book a Demo
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </Link>
               <Link

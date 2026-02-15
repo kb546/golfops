@@ -8,16 +8,16 @@ export const metadata: Metadata = {
 export default function PrivacyPage() {
   return (
     <div className="pt-[72px]">
-      <section className="section-padding bg-white">
-        <div className="container-marketing max-w-3xl">
-          <h1 className="text-4xl font-extrabold text-charcoal font-heading mb-2">
+      <section className="section-padding bg-[var(--color-bg-1)]">
+        <div className="container-marketing max-w-3xl rounded-[var(--radius-lg)] border border-[var(--color-border-subtle)] bg-[var(--color-surface)] p-8 md:p-12">
+          <h1 className="text-4xl font-extrabold text-[var(--color-text-primary)] font-heading mb-2">
             Privacy Policy
           </h1>
-          <p className="text-sm text-gray mb-12">Last updated: February 2026</p>
+          <p className="text-sm text-[var(--color-text-muted)] mb-12">Last updated: February 2026</p>
 
-          <div className="space-y-8 text-base text-slate leading-relaxed">
+          <div className="space-y-8 text-base text-[var(--color-text-secondary)] leading-relaxed">
             <section>
-              <h2 className="text-xl font-bold text-charcoal font-heading mb-3">1. Information We Collect</h2>
+              <h2 className="text-xl font-bold text-[var(--color-text-primary)] font-heading mb-3">1. Information We Collect</h2>
               <p>
                 We collect information you provide directly, including your name, email address,
                 organization details, and event data when you create an account or register for events.
@@ -27,7 +27,7 @@ export default function PrivacyPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-charcoal font-heading mb-3">2. How We Use Your Information</h2>
+              <h2 className="text-xl font-bold text-[var(--color-text-primary)] font-heading mb-3">2. How We Use Your Information</h2>
               <p>We use collected information to:</p>
               <ul className="list-disc list-inside mt-2 space-y-1">
                 <li>Provide, operate, and maintain the GolfOps platform</li>
@@ -40,7 +40,7 @@ export default function PrivacyPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-charcoal font-heading mb-3">3. Payment Data</h2>
+              <h2 className="text-xl font-bold text-[var(--color-text-primary)] font-heading mb-3">3. Payment Data</h2>
               <p>
                 GolfOps does not store credit card numbers or sensitive payment data directly.
                 All payment processing is handled by our PCI-compliant payment partners
@@ -50,7 +50,7 @@ export default function PrivacyPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-charcoal font-heading mb-3">4. Data Sharing</h2>
+              <h2 className="text-xl font-bold text-[var(--color-text-primary)] font-heading mb-3">4. Data Sharing</h2>
               <p>
                 We do not sell your personal data. We share data only with service providers
                 necessary to operate the platform (hosting, email delivery, payment processing)
@@ -59,7 +59,7 @@ export default function PrivacyPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-charcoal font-heading mb-3">5. Data Retention</h2>
+              <h2 className="text-xl font-bold text-[var(--color-text-primary)] font-heading mb-3">5. Data Retention</h2>
               <p>
                 We retain your account and event data for as long as your account is active.
                 You may request deletion of your data at any time by contacting us at
@@ -68,7 +68,7 @@ export default function PrivacyPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-charcoal font-heading mb-3">6. Security</h2>
+              <h2 className="text-xl font-bold text-[var(--color-text-primary)] font-heading mb-3">6. Security</h2>
               <p>
                 We implement industry-standard security measures including encryption in transit
                 (TLS), encryption at rest, access controls, and regular security audits to
@@ -77,10 +77,10 @@ export default function PrivacyPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-charcoal font-heading mb-3">7. Contact</h2>
+              <h2 className="text-xl font-bold text-[var(--color-text-primary)] font-heading mb-3">7. Contact</h2>
               <p>
                 For privacy-related questions or data requests, contact us at{" "}
-                <a href="mailto:privacy@golfops.io" className="text-forest font-semibold hover:underline">
+                <a href="mailto:privacy@golfops.io" className="text-lime font-semibold hover:underline">
                   privacy@golfops.io
                 </a>.
               </p>

@@ -3,76 +3,93 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Play } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { useRef } from "react";
 
 export function Hero() {
-  return (
-    <section className="relative overflow-hidden bg-white pt-[72px]">
-      {/* Subtle background pattern */}
-      <div className="absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: `radial-gradient(circle at 1px 1px, var(--color-forest) 1px, transparent 0)`,
-        backgroundSize: '32px 32px',
-      }} />
+  const ref = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
 
-      <div className="container-marketing relative">
-        <div className="flex flex-col items-center text-center py-20 md:py-28 lg:py-32">
-          {/* Badge */}
+  // Parallax effects
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 0.8, 0.3]);
+
+  return (
+    <section ref={ref} className="relative overflow-hidden bg-white pt-[72px]">
+      {/* Subtle background pattern with parallax */}
+      <motion.div
+        className="absolute inset-0 opacity-[0.03]"
+        style={{
+          backgroundImage: `radial-gradient(circle at 1px 1px, var(--color-lime) 1px, transparent 0)`,
+          backgroundSize: '32px 32px',
+          y: y,
+        }}
+      />
+
+      <motion.div className="container-marketing relative" style={{ opacity }}>
+        <div className="flex flex-col items-center text-center py-24 md:py-32 lg:py-40">
+          {/* Badge - Premium styling with gold accent */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-emerald/10 text-emerald rounded-full text-sm font-medium mb-8">
+            <div className="inline-flex items-center gap-2 px-5 py-2 bg-gradient-to-r from-lime/10 to-emerald/10 text-lime rounded-full text-sm font-semibold mb-10 border border-lime/30 shadow-lg shadow-lime/10">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-lime opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-lime"></span>
               </span>
-              Now accepting early access signups
+              Now onboarding pilot partners
             </div>
           </motion.div>
 
-          {/* Headline */}
+          {/* Headline - Larger and more dramatic */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-charcoal leading-[1.1] max-w-4xl font-heading"
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight text-[var(--color-text-primary)] leading-[1.05] max-w-5xl font-heading"
           >
             Run Smarter Golf Events.{" "}
-            <span className="text-gradient">Anywhere in the World.</span>
+            <span className="text-gradient bg-clip-text">Anywhere in the World.</span>
           </motion.h1>
 
-          {/* Subheadline */}
+          {/* Subheadline - Larger for better hierarchy */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mt-6 text-lg md:text-xl text-slate max-w-2xl leading-relaxed"
+            className="mt-8 text-xl md:text-2xl text-[var(--color-text-secondary)] max-w-3xl leading-relaxed"
           >
             The all-in-one platform for registration, pairings, live scoring,
             payments, and communication &mdash; powered by AI.
           </motion.p>
 
-          {/* CTAs */}
+          {/* CTAs - Larger and more prominent */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-center gap-4 mt-10"
+            className="flex flex-col sm:flex-row items-center gap-5 mt-12"
           >
             <Link
-              href="/register"
-              className="group inline-flex items-center gap-2 px-8 py-4 text-base font-semibold text-white bg-forest hover:bg-forest-light rounded-[var(--radius-sm)] transition-all shadow-card hover:shadow-elevated"
+              href="/demo"
+              className={cn(buttonVariants({ variant: "primary", size: "xl" }), "group shadow-xl hover:shadow-2xl")}
             >
-              Get Started Free
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              Book a Demo
+              <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
             </Link>
             <Link
-              href="/demo"
-              className="group inline-flex items-center gap-2 px-8 py-4 text-base font-semibold text-charcoal bg-white hover:bg-light border border-gray/20 rounded-[var(--radius-sm)] transition-all"
+              href="/contact"
+              className={cn(buttonVariants({ variant: "tertiary", size: "xl" }), "group")}
             >
-              <Play className="w-4 h-4 text-forest" />
-              Book a Demo
+              <Play className="w-5 h-5" />
+              Contact Sales
             </Link>
           </motion.div>
 
@@ -81,19 +98,19 @@ export function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            className="mt-12 text-sm text-gray"
+            className="mt-12 text-sm text-[var(--color-text-secondary)]"
           >
             Trusted by tournament organizers across 4 continents
           </motion.p>
 
-          {/* Hero image — Tournament scene */}
+          {/* Hero image — Tournament scene - Premium styling */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
-            className="mt-16 w-full max-w-5xl"
+            className="mt-20 w-full max-w-6xl"
           >
-            <div className="relative rounded-[var(--radius-lg)] overflow-hidden shadow-modal border border-gray/10">
+            <div className="relative rounded-[var(--radius-xl)] overflow-hidden shadow-2xl border border-gray/20">
               <Image
                 src="/images/hero/tournament-crowd.jpg"
                 alt="Professional golf tournament with excited spectators watching a golfer tee off at a coastal course"
@@ -102,20 +119,20 @@ export function Hero() {
                 className="w-full h-auto object-cover"
                 priority
               />
-              {/* Gradient overlay at bottom */}
-              <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent" />
-              {/* Dashboard preview overlay */}
-              <div className="absolute inset-x-4 md:inset-x-12 bottom-6 md:bottom-10">
-                <div className="bg-white/95 backdrop-blur-sm rounded-[var(--radius-md)] shadow-elevated border border-gray/10 p-4 md:p-6">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="flex gap-1.5">
-                      <div className="w-2.5 h-2.5 rounded-full bg-error/60" />
-                      <div className="w-2.5 h-2.5 rounded-full bg-warning/60" />
-                      <div className="w-2.5 h-2.5 rounded-full bg-success/60" />
+              {/* Enhanced gradient overlay */}
+              <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-black/40 via-black/20 to-transparent" />
+              {/* Dashboard preview overlay - More premium */}
+              <div className="absolute inset-x-4 md:inset-x-16 bottom-8 md:bottom-12">
+                <div className="bg-white/98 backdrop-blur-xl rounded-[var(--radius-lg)] shadow-2xl border border-white/20 p-5 md:p-8">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="flex gap-2">
+                      <div className="w-3 h-3 rounded-full bg-error" />
+                      <div className="w-3 h-3 rounded-full bg-warning" />
+                      <div className="w-3 h-3 rounded-full bg-success" />
                     </div>
-                    <span className="text-[10px] md:text-xs text-gray font-medium">GolfOps Dashboard</span>
+                    <span className="text-xs md:text-sm text-[var(--color-text-muted)] font-semibold">GolfOps Dashboard</span>
                   </div>
-                  <div className="grid grid-cols-3 gap-3">
+                  <div className="grid grid-cols-3 gap-4">
                     {[
                       { label: "Events", value: "12" },
                       { label: "Revenue", value: "$24.5k" },
@@ -123,12 +140,12 @@ export function Hero() {
                     ].map((stat) => (
                       <div
                         key={stat.label}
-                        className="p-2 md:p-3 rounded-[var(--radius-sm)] bg-lighter border border-gray/10"
+                        className="p-3 md:p-4 rounded-[var(--radius-md)] bg-gradient-to-br from-lime/5 to-emerald/5 border border-lime/10 shadow-sm"
                       >
-                        <p className="text-sm md:text-xl font-bold text-charcoal font-heading">
+                        <p className="text-lg md:text-2xl font-extrabold text-[var(--color-text-primary)] font-heading">
                           {stat.value}
                         </p>
-                        <p className="text-[9px] md:text-xs text-gray">{stat.label}</p>
+                        <p className="text-[10px] md:text-xs text-[var(--color-text-secondary)] font-medium mt-0.5">{stat.label}</p>
                       </div>
                     ))}
                   </div>
@@ -137,7 +154,7 @@ export function Hero() {
             </div>
           </motion.div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

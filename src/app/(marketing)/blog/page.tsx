@@ -75,10 +75,10 @@ export default function BlogPage() {
             <p className="text-sm font-semibold text-emerald uppercase tracking-wider mb-3">
               Blog
             </p>
-            <h1 className="text-4xl md:text-5xl font-extrabold text-charcoal font-heading leading-tight">
+            <h1 className="text-4xl md:text-5xl font-extrabold text-[var(--color-text-primary)] font-heading leading-tight">
               Insights for Organizers
             </h1>
-            <p className="mt-4 text-lg text-slate">
+            <p className="mt-4 text-lg text-[var(--color-text-secondary)]">
               Guides, tips, and strategies to help you run better golf events.
             </p>
           </div>
@@ -103,15 +103,15 @@ export default function BlogPage() {
                     <span className="text-xs font-medium text-emerald bg-emerald/10 px-2.5 py-1 rounded-full">
                       {post.category}
                     </span>
-                    <span className="flex items-center gap-1 text-xs text-gray">
+                    <span className="flex items-center gap-1 text-xs text-[var(--color-text-secondary)]">
                       <Clock className="w-3 h-3" />
                       {post.readTime}
                     </span>
                   </div>
-                  <h2 className="text-lg font-bold text-charcoal font-heading mb-2 group-hover:text-forest transition-colors leading-snug">
+                  <h2 className="text-lg font-bold text-[var(--color-text-primary)] font-heading mb-2 group-hover:text-lime transition-colors leading-snug">
                     {post.title}
                   </h2>
-                  <p className="text-sm text-slate leading-relaxed">
+                  <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
                     {post.excerpt}
                   </p>
                 </div>

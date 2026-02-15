@@ -9,6 +9,7 @@ import {
   Award,
   Sparkles,
 } from "lucide-react";
+import { HeadlineBlock } from "@/components/marketing/sections";
 
 const features = [
   {
@@ -25,7 +26,7 @@ const features = [
     description: "AI-powered foursomes by handicap & preference",
     detail:
       "Our intelligent engine considers skill levels, player preferences, and relationships to create balanced, enjoyable groups.",
-    color: "bg-emerald/10 text-emerald",
+    color: "bg-mint-fresh/10 text-green-accent",
   },
   {
     icon: Radio,
@@ -33,7 +34,7 @@ const features = [
     description: "Real-time leaderboards on any device",
     detail:
       "Players enter scores on their phones. Spectators follow live leaderboards. Display results on TV screens at the clubhouse.",
-    color: "bg-warning/10 text-warning",
+    color: "bg-lime/10 text-lime",
   },
   {
     icon: CreditCard,
@@ -41,7 +42,7 @@ const features = [
     description: "Stripe, M-Pesa, MoMo, PayStack — one dashboard",
     detail:
       "Accept payments via card, mobile money, or bank transfer. Automatic currency conversion and unified reporting.",
-    color: "bg-error/10 text-error",
+    color: "bg-green/10 text-green-accent",
   },
   {
     icon: Award,
@@ -57,7 +58,7 @@ const features = [
     description: "Draft emails, send reminders, automate follow-ups",
     detail:
       "AI-generated email drafts, automated confirmation sequences, and smart scheduling so you never miss a touchpoint.",
-    color: "bg-forest/10 text-forest",
+    color: "bg-forest/10 text-green-accent",
   },
 ];
 
@@ -79,25 +80,21 @@ const itemVariants = {
 
 export function FeatureShowcase() {
   return (
-    <section className="section-padding bg-white">
+    <section className="section-padding bg-cloud">
       <div className="container-marketing">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="mb-16"
         >
-          <p className="text-sm font-semibold text-emerald uppercase tracking-wider mb-3">
-            Everything you need
-          </p>
-          <h2 className="text-3xl md:text-4xl font-bold text-charcoal font-heading">
-            One platform. Every tool.
-          </h2>
-          <p className="mt-4 text-lg text-slate max-w-2xl mx-auto">
-            From the first registration to the final scorecard, GolfOps handles
-            every aspect of your event.
-          </p>
+          <HeadlineBlock
+            eyebrow="Everything you need"
+            title="One platform. Every tool."
+            subtitle="From the first registration to the final scorecard, GolfOps handles every aspect of your event."
+            align="center"
+          />
         </motion.div>
 
         <motion.div
@@ -113,20 +110,22 @@ export function FeatureShowcase() {
               <motion.div
                 key={feature.title}
                 variants={itemVariants}
-                className="group relative bg-white rounded-[var(--radius-md)] p-8 border border-gray/10 hover:border-emerald/20 hover:shadow-elevated transition-all"
+                whileHover={{ y: -8 }}
+                transition={{ duration: 0.3 }}
+                className="group relative bg-[var(--color-surface)] rounded-[var(--radius-lg)] p-8 border border-[var(--color-border-subtle)] hover:border-lime/30 hover:shadow-elevated transition-all duration-300"
               >
                 <div
-                  className={`flex items-center justify-center w-12 h-12 rounded-[var(--radius-sm)] ${feature.color} mb-5`}
+                  className={`flex items-center justify-center w-16 h-16 rounded-[var(--radius-md)] ${feature.color} mb-6 group-hover:scale-110 group-hover:shadow-lg transition-all duration-300`}
                 >
-                  <Icon className="w-6 h-6" />
+                  <Icon className="w-7 h-7" />
                 </div>
-                <h3 className="text-lg font-bold text-charcoal font-heading mb-2">
+                <h3 className="text-xl font-bold text-[var(--color-text-primary)] font-heading mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-sm font-medium text-forest mb-2">
+                <p className="text-sm font-semibold text-lime mb-3">
                   {feature.description}
                 </p>
-                <p className="text-sm text-slate leading-relaxed">
+                <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
                   {feature.detail}
                 </p>
               </motion.div>

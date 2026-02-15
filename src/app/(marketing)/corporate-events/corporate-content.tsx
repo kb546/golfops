@@ -48,17 +48,17 @@ export function CorporateContent() {
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-info/10 text-info rounded-full text-xs font-semibold mb-6">
                 <Briefcase className="w-3.5 h-3.5" /> For Corporate Events
               </div>
-              <h1 className="text-4xl md:text-5xl font-extrabold text-charcoal font-heading leading-tight">
+              <h1 className="text-4xl md:text-5xl font-extrabold text-[var(--color-text-primary)] font-heading leading-tight">
                 Professional Golf Events{" "}
                 <span className="text-gradient">Without the Headache</span>
               </h1>
-              <p className="mt-6 text-lg text-slate leading-relaxed">
+              <p className="mt-6 text-lg text-[var(--color-text-secondary)] leading-relaxed">
                 From branded event pages to instant leaderboards — impress
                 clients and partners, not spreadsheets.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mt-8">
                 <Link
-                  href="/register"
+                  href="/demo"
                   className="group inline-flex items-center gap-2 px-8 py-4 text-base font-semibold text-white bg-forest hover:bg-forest-light rounded-[var(--radius-sm)] transition-all shadow-card"
                 >
                   Plan Your Corporate Event
@@ -66,7 +66,7 @@ export function CorporateContent() {
                 </Link>
                 <Link
                   href="/demo"
-                  className="inline-flex items-center gap-2 px-8 py-4 text-base font-semibold text-charcoal border border-gray/20 hover:bg-light rounded-[var(--radius-sm)] transition-all"
+                  className="inline-flex items-center gap-2 px-8 py-4 text-base font-semibold text-[var(--color-text-primary)] border border-gray/20 hover:bg-light rounded-[var(--radius-sm)] transition-all"
                 >
                   Book a Demo
                 </Link>
@@ -92,7 +92,7 @@ export function CorporateContent() {
       </section>
 
       {/* Comparison */}
-      <section className="section-padding bg-lighter">
+      <section className="section-padding bg-[var(--color-bg-lighter)]">
         <div className="container-marketing max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -101,7 +101,7 @@ export function CorporateContent() {
             transition={{ duration: 0.5 }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-charcoal font-heading">
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-primary)] font-heading">
               The Old Way vs. The GolfOps Way
             </h2>
           </motion.div>
@@ -117,11 +117,11 @@ export function CorporateContent() {
               >
                 <div className="flex items-center gap-3 p-4 bg-white rounded-[var(--radius-sm)] border border-error/10">
                   <XCircle className="w-5 h-5 text-error/50 flex-shrink-0" />
-                  <span className="text-sm text-slate line-through">{item.old}</span>
+                  <span className="text-sm text-[var(--color-text-secondary)] line-through">{item.old}</span>
                 </div>
                 <div className="flex items-center gap-3 p-4 bg-white rounded-[var(--radius-sm)] border border-emerald/20">
                   <CheckCircle className="w-5 h-5 text-emerald flex-shrink-0" />
-                  <span className="text-sm text-charcoal font-medium">{item.new}</span>
+                  <span className="text-sm text-[var(--color-text-primary)] font-medium">{item.new}</span>
                 </div>
               </motion.div>
             ))}
@@ -145,10 +145,10 @@ export function CorporateContent() {
                   className="p-6 rounded-[var(--radius-md)] bg-lighter border border-gray/5 hover:shadow-card transition-all"
                 >
                   <Icon className="w-8 h-8 text-emerald mb-4" />
-                  <h3 className="text-base font-bold text-charcoal font-heading mb-2">
+                  <h3 className="text-base font-bold text-[var(--color-text-primary)] font-heading mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-slate leading-relaxed">
+                  <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
                     {item.description}
                   </p>
                 </motion.div>
@@ -170,13 +170,13 @@ export function CorporateContent() {
             <h2 className="text-3xl md:text-4xl font-bold font-heading mb-4">
               Impress your clients. Not your spreadsheet.
             </h2>
-            <p className="text-lg text-gray max-w-xl mx-auto mb-8">
+            <p className="text-lg text-[var(--color-text-light-secondary)] max-w-xl mx-auto mb-8">
               Join corporate event planners who trust GolfOps to deliver
               flawless golf days.
             </p>
             <Link
-              href="/register"
-              className="group inline-flex items-center gap-2 px-8 py-4 text-base font-semibold text-forest bg-white hover:bg-light rounded-[var(--radius-sm)] transition-all"
+              href="/demo"
+              className="group inline-flex items-center gap-2 px-8 py-4 text-base font-semibold text-white bg-gradient-primary hover:shadow-glow-lime-hover rounded-[var(--radius-sm)] transition-all shadow-glow-lime"
             >
               Get Started
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

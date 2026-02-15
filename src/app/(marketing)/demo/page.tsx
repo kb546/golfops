@@ -15,16 +15,16 @@ export default function DemoPage() {
           <div className="flex items-center justify-center w-16 h-16 mx-auto rounded-full bg-emerald/10 text-emerald mb-6">
             <Calendar className="w-8 h-8" />
           </div>
-          <h1 className="text-4xl md:text-5xl font-extrabold text-charcoal font-heading leading-tight">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-[var(--color-text-primary)] font-heading leading-tight">
             See GolfOps in Action
           </h1>
-          <p className="mt-6 text-lg text-slate leading-relaxed max-w-xl mx-auto">
+          <p className="mt-6 text-lg text-[var(--color-text-secondary)] leading-relaxed max-w-xl mx-auto">
             Book a personalized demo with our team. We&apos;ll walk you through
             the platform and answer any questions about your specific event needs.
           </p>
 
-          <div className="mt-12 p-8 bg-lighter rounded-[var(--radius-md)] border border-gray/10">
-            <p className="text-base text-slate mb-6">
+          <div className="mt-12 p-8 bg-[var(--color-bg-lighter)] rounded-[var(--radius-md)] border border-gray/10">
+            <p className="text-base text-[var(--color-text-secondary)] mb-6">
               Demo scheduling is coming soon. In the meantime, reach out
               directly and we&apos;ll set up a call.
             </p>
@@ -37,10 +37,10 @@ export default function DemoPage() {
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </Link>
               <Link
-                href="/register"
-                className="inline-flex items-center gap-2 px-8 py-4 text-base font-semibold text-charcoal border border-gray/20 hover:bg-light rounded-[var(--radius-sm)] transition-all"
+                href="/demo"
+                className="inline-flex items-center gap-2 px-8 py-4 text-base font-semibold text-[var(--color-text-primary)] border border-gray/20 hover:bg-light rounded-[var(--radius-sm)] transition-all"
               >
-                Or Get Started Free
+                Or Book a Demo
               </Link>
             </div>
           </div>

@@ -39,7 +39,7 @@ export function AboutContent() {
   return (
     <div className="pt-[72px]">
       {/* Hero */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-[var(--color-bg-1)]">
         <div className="container-marketing">
           <div className="max-w-3xl">
             <motion.div
@@ -50,11 +50,11 @@ export function AboutContent() {
               <p className="text-sm font-semibold text-emerald uppercase tracking-wider mb-3">
                 About us
               </p>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-charcoal font-heading leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[var(--color-text-light)] font-heading leading-tight">
                 Built by People Who{" "}
                 <span className="text-gradient">Run Golf Events</span>
               </h1>
-              <p className="mt-6 text-lg md:text-xl text-slate leading-relaxed max-w-2xl">
+              <p className="mt-6 text-lg md:text-xl text-[var(--color-text-light-secondary)] leading-relaxed max-w-2xl">
                 We&apos;ve been in the weeds — juggling spreadsheets, chasing
                 payments, and pairing foursomes at midnight. GolfOps exists so
                 you never have to.
@@ -65,7 +65,7 @@ export function AboutContent() {
       </section>
 
       {/* Story */}
-      <section className="section-padding bg-lighter">
+      <section className="section-padding bg-[var(--color-bg-2)]">
         <div className="container-marketing">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <motion.div
@@ -74,10 +74,10 @@ export function AboutContent() {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-charcoal font-heading mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-light)] font-heading mb-6">
                 Our Story
               </h2>
-              <div className="space-y-4 text-base text-slate leading-relaxed">
+              <div className="space-y-4 text-base text-[var(--color-text-light-secondary)] leading-relaxed">
                 <p>
                   GolfOps started the way most great tools do — out of pure
                   frustration. Our founders had organized dozens of charity golf
@@ -96,7 +96,7 @@ export function AboutContent() {
                   afterthought. None of them worked for the organizers we knew in
                   Kampala, Nairobi, Lagos, or Accra.
                 </p>
-                <p className="font-semibold text-charcoal">
+                <p className="font-semibold text-[var(--color-text-light)]">
                   So we built GolfOps — a platform that works everywhere, accepts
                   every payment method, and makes the hard parts of event
                   management feel effortless.
@@ -143,7 +143,7 @@ export function AboutContent() {
             <h2 className="text-3xl md:text-4xl font-bold font-heading">
               Make golf events effortless for organizers worldwide
             </h2>
-            <p className="mt-6 text-lg text-gray">
+            <p className="mt-6 text-lg text-[var(--color-text-light-secondary)]">
               Whether you&apos;re running a 24-player charity scramble in
               Kampala or a 288-player corporate classic in Connecticut, you
               deserve tools that just work.
@@ -153,7 +153,7 @@ export function AboutContent() {
       </section>
 
       {/* Values */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-[var(--color-bg-1)]">
         <div className="container-marketing">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -162,7 +162,7 @@ export function AboutContent() {
             transition={{ duration: 0.5 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-charcoal font-heading">
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-light)] font-heading">
               Our Values
             </h2>
           </motion.div>
@@ -182,10 +182,10 @@ export function AboutContent() {
                   <div className="flex items-center justify-center w-14 h-14 mx-auto rounded-full bg-emerald/10 text-emerald mb-5">
                     <Icon className="w-7 h-7" />
                   </div>
-                  <h3 className="text-lg font-bold text-charcoal font-heading mb-2">
+                  <h3 className="text-lg font-bold text-[var(--color-text-light)] font-heading mb-2">
                     {value.title}
                   </h3>
-                  <p className="text-sm text-slate leading-relaxed">
+                  <p className="text-sm text-[var(--color-text-light-secondary)] leading-relaxed">
                     {value.description}
                   </p>
                 </motion.div>
@@ -196,7 +196,7 @@ export function AboutContent() {
       </section>
 
       {/* Stats */}
-      <section className="section-padding bg-lighter">
+      <section className="section-padding bg-[var(--color-bg-2)]">
         <div className="container-marketing">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, i) => (
@@ -208,10 +208,10 @@ export function AboutContent() {
                 transition={{ duration: 0.4, delay: i * 0.1 }}
                 className="text-center"
               >
-                <p className="text-3xl md:text-4xl font-extrabold text-charcoal font-heading">
+                <p className="text-3xl md:text-4xl font-extrabold text-[var(--color-text-light)] font-heading">
                   {stat.value}
                 </p>
-                <p className="mt-2 text-sm text-slate">{stat.label}</p>
+                <p className="mt-2 text-sm text-[var(--color-text-light-secondary)]">{stat.label}</p>
               </motion.div>
             ))}
           </div>
@@ -219,7 +219,7 @@ export function AboutContent() {
       </section>
 
       {/* Team placeholder */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-[var(--color-bg-1)]">
         <div className="container-marketing text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -227,10 +227,10 @@ export function AboutContent() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-charcoal font-heading mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-light)] font-heading mb-4">
               The Team
             </h2>
-            <p className="text-lg text-slate max-w-2xl mx-auto mb-12">
+            <p className="text-lg text-[var(--color-text-light-secondary)] max-w-2xl mx-auto mb-12">
               A small, focused team of golfers, engineers, and designers
               passionate about making events better.
             </p>
@@ -250,11 +250,11 @@ export function AboutContent() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.1 }}
               >
-                <div className="w-24 h-24 mx-auto rounded-full bg-lighter border-2 border-gray/10 flex items-center justify-center mb-4">
-                  <span className="text-2xl text-gray">?</span>
+                <div className="w-24 h-24 mx-auto rounded-full bg-[var(--color-surface)] border-2 border-[var(--color-border-subtle)] flex items-center justify-center mb-4">
+                  <span className="text-2xl text-[var(--color-text-light-secondary)]">?</span>
                 </div>
-                <p className="font-semibold text-charcoal font-heading">{member.name}</p>
-                <p className="text-sm text-gray">{member.role}</p>
+                <p className="font-semibold text-[var(--color-text-light)] font-heading">{member.name}</p>
+                <p className="text-sm text-[var(--color-text-light-secondary)]">{member.role}</p>
               </motion.div>
             ))}
           </div>
@@ -273,14 +273,14 @@ export function AboutContent() {
             <h2 className="text-3xl md:text-4xl font-bold font-heading mb-4">
               Join us on the mission
             </h2>
-            <p className="text-lg text-gray max-w-xl mx-auto mb-8">
+            <p className="text-lg text-[var(--color-text-light-secondary)] max-w-xl mx-auto mb-8">
               Start running smarter golf events today.
             </p>
             <Link
-              href="/register"
-              className="group inline-flex items-center gap-2 px-8 py-4 text-base font-semibold text-forest bg-white hover:bg-light rounded-[var(--radius-sm)] transition-all"
+              href="/demo"
+              className="group inline-flex items-center gap-2 px-8 py-4 text-base font-semibold text-white bg-gradient-primary hover:shadow-glow-lime-hover rounded-[var(--radius-sm)] transition-all shadow-glow-lime"
             >
-              Get Started Free
+              Book a Demo
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </motion.div>

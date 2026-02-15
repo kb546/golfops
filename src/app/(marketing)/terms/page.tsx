@@ -8,16 +8,16 @@ export const metadata: Metadata = {
 export default function TermsPage() {
   return (
     <div className="pt-[72px]">
-      <section className="section-padding bg-white">
-        <div className="container-marketing max-w-3xl">
-          <h1 className="text-4xl font-extrabold text-charcoal font-heading mb-2">
+      <section className="section-padding bg-[var(--color-bg-1)]">
+        <div className="container-marketing max-w-3xl rounded-[var(--radius-lg)] border border-[var(--color-border-subtle)] bg-[var(--color-surface)] p-8 md:p-12">
+          <h1 className="text-4xl font-extrabold text-[var(--color-text-primary)] font-heading mb-2">
             Terms of Service
           </h1>
-          <p className="text-sm text-gray mb-12">Last updated: February 2026</p>
+          <p className="text-sm text-[var(--color-text-muted)] mb-12">Last updated: February 2026</p>
 
-          <div className="space-y-8 text-base text-slate leading-relaxed">
+          <div className="space-y-8 text-base text-[var(--color-text-secondary)] leading-relaxed">
             <section>
-              <h2 className="text-xl font-bold text-charcoal font-heading mb-3">1. Acceptance of Terms</h2>
+              <h2 className="text-xl font-bold text-[var(--color-text-primary)] font-heading mb-3">1. Acceptance of Terms</h2>
               <p>
                 By accessing or using GolfOps (&ldquo;the Platform&rdquo;), you agree to be bound by these
                 Terms of Service. If you do not agree, please do not use the Platform.
@@ -25,7 +25,7 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-charcoal font-heading mb-3">2. Account Registration</h2>
+              <h2 className="text-xl font-bold text-[var(--color-text-primary)] font-heading mb-3">2. Account Registration</h2>
               <p>
                 To use certain features, you must create an account with accurate and complete
                 information. You are responsible for maintaining the security of your account
@@ -34,7 +34,7 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-charcoal font-heading mb-3">3. Use of the Platform</h2>
+              <h2 className="text-xl font-bold text-[var(--color-text-primary)] font-heading mb-3">3. Use of the Platform</h2>
               <p>You agree to use GolfOps only for lawful purposes related to golf event management. You may not:</p>
               <ul className="list-disc list-inside mt-2 space-y-1">
                 <li>Use the Platform for any illegal or unauthorized purpose</li>
@@ -46,7 +46,7 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-charcoal font-heading mb-3">4. Payments & Fees</h2>
+              <h2 className="text-xl font-bold text-[var(--color-text-primary)] font-heading mb-3">4. Payments & Fees</h2>
               <p>
                 Event organizers are responsible for applicable subscription fees and per-player fees
                 as outlined on our pricing page. Payment processing fees from third-party providers
@@ -55,7 +55,7 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-charcoal font-heading mb-3">5. Intellectual Property</h2>
+              <h2 className="text-xl font-bold text-[var(--color-text-primary)] font-heading mb-3">5. Intellectual Property</h2>
               <p>
                 The GolfOps platform, including its design, code, and content, is owned by GolfOps
                 and protected by intellectual property laws. You retain ownership of your event
@@ -64,7 +64,7 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-charcoal font-heading mb-3">6. Limitation of Liability</h2>
+              <h2 className="text-xl font-bold text-[var(--color-text-primary)] font-heading mb-3">6. Limitation of Liability</h2>
               <p>
                 GolfOps is provided &ldquo;as is&rdquo; without warranty of any kind. We are not liable for
                 any indirect, incidental, or consequential damages arising from your use of the
@@ -74,7 +74,7 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-charcoal font-heading mb-3">7. Termination</h2>
+              <h2 className="text-xl font-bold text-[var(--color-text-primary)] font-heading mb-3">7. Termination</h2>
               <p>
                 Either party may terminate at any time. Upon termination, your right to use the
                 Platform ceases. We will provide a reasonable period to export your data.
@@ -82,10 +82,10 @@ export default function TermsPage() {
             </section>
 
             <section>
-              <h2 className="text-xl font-bold text-charcoal font-heading mb-3">8. Contact</h2>
+              <h2 className="text-xl font-bold text-[var(--color-text-primary)] font-heading mb-3">8. Contact</h2>
               <p>
                 For questions about these terms, contact us at{" "}
-                <a href="mailto:legal@golfops.io" className="text-forest font-semibold hover:underline">
+                <a href="mailto:legal@golfops.io" className="text-lime font-semibold hover:underline">
                   legal@golfops.io
                 </a>.
               </p>

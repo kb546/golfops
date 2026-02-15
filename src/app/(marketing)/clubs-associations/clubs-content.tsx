@@ -39,17 +39,17 @@ export function ClubsContent() {
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald/10 text-emerald rounded-full text-xs font-semibold mb-6">
                 <Building2 className="w-3.5 h-3.5" /> For Clubs & Associations
               </div>
-              <h1 className="text-4xl md:text-5xl font-extrabold text-charcoal font-heading leading-tight">
+              <h1 className="text-4xl md:text-5xl font-extrabold text-[var(--color-text-primary)] font-heading leading-tight">
                 Your Club&apos;s Tournament Season,{" "}
                 <span className="text-gradient">Simplified</span>
               </h1>
-              <p className="mt-6 text-lg text-slate leading-relaxed">
+              <p className="mt-6 text-lg text-[var(--color-text-secondary)] leading-relaxed">
                 Run weekly competitions, member events, and inter-club
                 tournaments — all from one platform.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mt-8">
                 <Link
-                  href="/register"
+                  href="/demo"
                   className="group inline-flex items-center gap-2 px-8 py-4 text-base font-semibold text-white bg-forest hover:bg-forest-light rounded-[var(--radius-sm)] transition-all shadow-card"
                 >
                   Get Started
@@ -57,7 +57,7 @@ export function ClubsContent() {
                 </Link>
                 <Link
                   href="/demo"
-                  className="inline-flex items-center gap-2 px-8 py-4 text-base font-semibold text-charcoal border border-gray/20 hover:bg-light rounded-[var(--radius-sm)] transition-all"
+                  className="inline-flex items-center gap-2 px-8 py-4 text-base font-semibold text-[var(--color-text-primary)] border border-gray/20 hover:bg-light rounded-[var(--radius-sm)] transition-all"
                 >
                   Book a Demo
                 </Link>
@@ -83,7 +83,7 @@ export function ClubsContent() {
       </section>
 
       {/* Features */}
-      <section className="section-padding bg-lighter">
+      <section className="section-padding bg-[var(--color-bg-lighter)]">
         <div className="container-marketing">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -92,10 +92,10 @@ export function ClubsContent() {
             transition={{ duration: 0.5 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-charcoal font-heading">
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-text-primary)] font-heading">
               Built for the way clubs actually operate
             </h2>
-            <p className="mt-4 text-lg text-slate max-w-2xl mx-auto">
+            <p className="mt-4 text-lg text-[var(--color-text-secondary)] max-w-2xl mx-auto">
               From weekly medals to the annual championship, GolfOps handles
               your full competition calendar.
             </p>
@@ -113,10 +113,10 @@ export function ClubsContent() {
                   className="p-6 bg-white rounded-[var(--radius-md)] border border-gray/5 hover:shadow-card transition-all"
                 >
                   <Icon className="w-8 h-8 text-emerald mb-4" />
-                  <h3 className="text-base font-bold text-charcoal font-heading mb-2">
+                  <h3 className="text-base font-bold text-[var(--color-text-primary)] font-heading mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-slate leading-relaxed">
+                  <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
                     {item.description}
                   </p>
                 </motion.div>
@@ -137,10 +137,10 @@ export function ClubsContent() {
               transition={{ duration: 0.5 }}
             >
               <BarChart3 className="w-10 h-10 text-emerald mb-4" />
-              <h2 className="text-3xl font-bold text-charcoal font-heading mb-4">
+              <h2 className="text-3xl font-bold text-[var(--color-text-primary)] font-heading mb-4">
                 Season-long standings, updated automatically
               </h2>
-              <p className="text-base text-slate leading-relaxed mb-6">
+              <p className="text-base text-[var(--color-text-secondary)] leading-relaxed mb-6">
                 No more manual Excel updates after every competition. GolfOps
                 automatically aggregates scores across events to maintain
                 accurate season-long standings for every division and flight.
@@ -154,7 +154,7 @@ export function ClubsContent() {
                 ].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-emerald mt-2 flex-shrink-0" />
-                    <span className="text-sm text-slate">{item}</span>
+                    <span className="text-sm text-[var(--color-text-secondary)]">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -191,14 +191,14 @@ export function ClubsContent() {
             <h2 className="text-3xl md:text-4xl font-bold font-heading mb-4">
               Simplify your club&apos;s competition season
             </h2>
-            <p className="text-lg text-gray max-w-xl mx-auto mb-8">
+            <p className="text-lg text-[var(--color-text-light-secondary)] max-w-xl mx-auto mb-8">
               From weekly medals to the annual championship. One platform.
             </p>
             <Link
-              href="/register"
-              className="group inline-flex items-center gap-2 px-8 py-4 text-base font-semibold text-forest bg-white hover:bg-light rounded-[var(--radius-sm)] transition-all"
+              href="/demo"
+              className="group inline-flex items-center gap-2 px-8 py-4 text-base font-semibold text-white bg-gradient-primary hover:shadow-glow-lime-hover rounded-[var(--radius-sm)] transition-all shadow-glow-lime"
             >
-              Get Started Free
+              Book a Demo
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </motion.div>

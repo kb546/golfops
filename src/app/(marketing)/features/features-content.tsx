@@ -99,7 +99,7 @@ const featureCategories = [
     id: "websites",
     label: "Event Websites",
     icon: Globe,
-    color: "bg-forest/10 text-forest",
+    color: "bg-forest/10 text-green-accent",
     description: "Beautiful, branded event pages that convert visitors to registrants.",
     features: [
       { icon: Palette, title: "Beautiful Templates", description: "6+ professionally designed templates ready to customize" },
@@ -146,7 +146,7 @@ export function FeaturesContent() {
   return (
     <div className="pt-[72px]">
       {/* Hero */}
-      <section className="section-padding bg-white">
+      <section className="section-padding bg-[var(--color-bg-1)]">
         <div className="container-marketing text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -156,12 +156,12 @@ export function FeaturesContent() {
             <p className="text-sm font-semibold text-emerald uppercase tracking-wider mb-3">
               Features
             </p>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-charcoal font-heading leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[var(--color-text-light)] font-heading leading-tight">
               Everything You Need.
               <br />
               <span className="text-gradient">Nothing You Don&apos;t.</span>
             </h1>
-            <p className="mt-6 text-lg md:text-xl text-slate max-w-2xl mx-auto">
+            <p className="mt-6 text-lg md:text-xl text-[var(--color-text-light-secondary)] max-w-2xl mx-auto">
               From registration to results — one platform, zero spreadsheets.
             </p>
           </motion.div>
@@ -193,7 +193,7 @@ export function FeaturesContent() {
           <section
             key={category.id}
             id={category.id}
-            className={`section-padding ${catIndex % 2 === 0 ? "bg-white" : "bg-lighter"}`}
+            className={`section-padding ${catIndex % 2 === 0 ? "bg-[var(--color-bg-1)]" : "bg-[var(--color-bg-2)]"}`}
           >
             <div className="container-marketing">
               <motion.div
@@ -208,7 +208,7 @@ export function FeaturesContent() {
                 </div>
                 <div>
                   <div className="flex items-center gap-3">
-                    <h2 className="text-2xl md:text-3xl font-bold text-charcoal font-heading">
+                    <h2 className="text-2xl md:text-3xl font-bold text-[var(--color-text-light)] font-heading">
                       {category.label}
                     </h2>
                     {category.highlight && (
@@ -217,7 +217,7 @@ export function FeaturesContent() {
                       </span>
                     )}
                   </div>
-                  <p className="mt-1 text-base text-slate">{category.description}</p>
+                  <p className="mt-1 text-base text-[var(--color-text-light-secondary)]">{category.description}</p>
                 </div>
               </motion.div>
 
@@ -231,16 +231,16 @@ export function FeaturesContent() {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true, margin: "-50px" }}
                       transition={{ duration: 0.4, delay: i * 0.05 }}
-                      className="flex gap-4 p-5 rounded-[var(--radius-md)] bg-white border border-gray/5 hover:border-emerald/20 hover:shadow-card transition-all"
+                      className="flex gap-4 p-5 rounded-[var(--radius-md)] bg-[var(--color-surface)] border border-[var(--color-border-subtle)] hover:border-emerald/30 hover:shadow-card transition-all"
                     >
                       <div className="flex-shrink-0 mt-0.5">
                         <Icon className="w-5 h-5 text-emerald" />
                       </div>
                       <div>
-                        <h3 className="text-sm font-bold text-charcoal font-heading mb-1">
+                        <h3 className="text-sm font-bold text-[var(--color-text-primary)] font-heading mb-1">
                           {feature.title}
                         </h3>
-                        <p className="text-sm text-slate leading-relaxed">
+                        <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
                           {feature.description}
                         </p>
                       </div>
@@ -265,15 +265,15 @@ export function FeaturesContent() {
             <h2 className="text-3xl md:text-4xl font-bold font-heading mb-4">
               Ready to see it in action?
             </h2>
-            <p className="text-lg text-gray max-w-xl mx-auto mb-8">
-              Start free with your first event. No credit card required.
+            <p className="text-lg text-[var(--color-text-light-secondary)] max-w-xl mx-auto mb-8">
+              Book a demo and get a tailored rollout plan.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
-                href="/register"
-                className="group inline-flex items-center gap-2 px-8 py-4 text-base font-semibold text-forest bg-white hover:bg-light rounded-[var(--radius-sm)] transition-all"
+                href="/demo"
+                className="group inline-flex items-center gap-2 px-8 py-4 text-base font-semibold text-white bg-gradient-primary hover:shadow-glow-lime-hover rounded-[var(--radius-sm)] transition-all shadow-glow-lime"
               >
-                Get Started Free
+                Book a Demo
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </Link>
               <Link

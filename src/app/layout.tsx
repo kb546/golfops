@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
+import { Suspense } from "react";
+import { PresentationModeController } from "@/components/shared/presentation-mode-controller";
 import "./globals.css";
 
 const inter = Inter({
@@ -43,9 +45,9 @@ export const metadata: Metadata = {
       "Registration, smart pairings, live scoring, global payments — one platform.",
   },
   icons: {
-    icon: "/logo.png",
-    shortcut: "/logo.png",
-    apple: "/logo.png",
+    icon: "/Golf_Ops_Logo/SVG/Logo_Mark_1.svg",
+    shortcut: "/Golf_Ops_Logo/SVG/Logo_Mark_1.svg",
+    apple: "/Golf_Ops_Logo/PNG/Logo_Mark_1.png",
   },
 };
 
@@ -60,6 +62,9 @@ export default function RootLayout({
         suppressHydrationWarning
         className={`${inter.variable} ${plusJakarta.variable} antialiased`}
       >
+        <Suspense fallback={null}>
+          <PresentationModeController />
+        </Suspense>
         {children}
       </body>
     </html>
