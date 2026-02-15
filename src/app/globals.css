@@ -322,6 +322,52 @@ html[data-presentation="true"] header {
 }
 
 /* ============================================
+   Loading States - Skeleton Animations
+   ============================================ */
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s infinite linear;
+  background-size: 200% 100%;
+}
+
+/* ============================================
+   Mobile Optimizations - Dashboard
+   ============================================ */
+
+@media (max-width: 768px) {
+  /* Reduce chart heights on mobile */
+  .recharts-responsive-container {
+    min-height: 200px !important;
+  }
+
+  /* Improve touch targets */
+  button,
+  a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Better mobile spacing for dashboard */
+  .dashboard-grid {
+    gap: 1rem;
+  }
+
+  /* Reduce padding on mobile cards */
+  .mobile-compact {
+    padding: 1rem;
+  }
+}
+
+/* ============================================
    Accessibility - Reduced Motion Support
    ============================================ */
 
