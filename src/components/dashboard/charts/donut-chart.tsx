@@ -75,7 +75,7 @@ export function DonutChart({
           cy="50%"
           innerRadius={innerRadius}
           outerRadius={outerRadius}
-          paddingAngle={2}
+          paddingAngle={0}
           dataKey="value"
         >
           {enrichedData.map((entry, index) => (

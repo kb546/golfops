@@ -58,27 +58,45 @@ export default function PaymentsPage() {
       {/* Revenue Dashboard */}
       <section className="mb-6">
         <Panel title="Total Revenue" subtitle="Current event">
-          <div className="grid md:grid-cols-[1fr,2fr] gap-8">
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+            {/* Circular Progress */}
             <div className="flex flex-col items-center justify-center">
               <CircularProgress
                 value={24580}
                 max={30000}
-                size={160}
-                strokeWidth={16}
+                size={140}
+                strokeWidth={14}
                 color="#84CC16"
               />
               <div className="mt-4 text-center">
-                <p className="text-sm text-slate">Goal: $30,000</p>
+                <p className="text-2xl font-bold text-charcoal font-heading">$24,500</p>
+                <p className="text-sm text-slate mt-1">Goal: $30,000</p>
                 <p className="text-xs text-success font-semibold mt-1">82% complete</p>
               </div>
             </div>
+
+            {/* Revenue Breakdown */}
             <div>
+              <h4 className="text-sm font-semibold text-charcoal mb-3">Revenue Breakdown</h4>
               <DonutChart
                 data={revenueBreakdown}
-                height={200}
+                height={220}
                 innerRadius={50}
                 outerRadius={75}
                 showLegend={true}
+              />
+            </div>
+
+            {/* Payment Method Mix */}
+            <div>
+              <h4 className="text-sm font-semibold text-charcoal mb-3">Payment Methods</h4>
+              <DonutChart
+                data={paymentMethodData}
+                height={220}
+                innerRadius={50}
+                outerRadius={75}
+                showLegend={true}
+                colors={["#84CC16", "#10B981", "#3B82F6", "#F59E0B"]}
               />
             </div>
           </div>
@@ -180,23 +198,13 @@ export default function PaymentsPage() {
         </Panel>
       </section>
 
-      {/* Regional & Method Mix */}
-      <section className="grid gap-6 xl:grid-cols-2">
+      {/* Revenue by Region */}
+      <section>
         <Panel title="Revenue by Region" subtitle="Current cycle">
           <BarChart
             data={regionalData}
             height={280}
             colors={["#84CC16", "#10B981", "#3B82F6"]}
-          />
-        </Panel>
-
-        <Panel title="Payment Method Mix" subtitle="Share of total payments">
-          <DonutChart
-            data={paymentMethodData}
-            height={280}
-            innerRadius={60}
-            outerRadius={90}
-            showLegend={true}
           />
         </Panel>
       </section>

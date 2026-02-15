@@ -32,8 +32,8 @@ export function DashboardShell({ children }: { children: React.ReactNode }) {
     <div className={cn("min-h-screen text-charcoal", deckMode ? "bg-gradient-soft" : "bg-cloud")}>
       <div className={cn("mx-auto flex", deckMode ? "max-w-[1380px] px-3 py-3 md:px-6 md:py-6" : "max-w-[1500px]")}>
         <aside className={cn(
-          "hidden min-h-screen w-72 border-r border-gray/10 bg-white px-5 py-6 lg:block",
-          deckMode && "min-h-0 rounded-l-[var(--radius-lg)] border-r border-gray/10"
+          "hidden w-72 border-r border-gray/10 bg-white px-5 py-6 lg:block sticky top-0 self-start h-screen overflow-y-auto",
+          deckMode && "rounded-l-[var(--radius-lg)] border-r border-gray/10"
         )}>
           <div className="mb-8 px-2">
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-lime">GolfOps Admin</p>
